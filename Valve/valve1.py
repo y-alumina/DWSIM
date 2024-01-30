@@ -10,32 +10,32 @@ class ControlValve:
 
     def open_valve(self):
         if not self.is_open:
-            curent_time = time.time() - start_time
-            print("Opening the valve -", curent_time)
+            current_time = time.time() - start_time
+            print("Opening the valve -", current_time)
             self.is_open = True
         else:
-            print("Valve opened")
+            print("Valve si already opened.")
 
     def close_valve(self):
         if self.is_open:
             curent_time = time.time() - start_time
-            print("Closing the Valve -", curent_time)
+            print("Closing the Valve -", current_time)
             self.is_open = False
         else:
-            print("Valve closed")
+            print("Valve is already closed.")
 
 def main():
-    valve_controler = ControlValve()
+    valve_controller = ControlValve()
 
     try:
         while True:
-            valve_controler.open_valve()
-            time.sleep(5)  # Katup terbuka selama 5 detik
-            valve_controler.close_valve()
-            time.sleep(10)  # Katup tertutup selama 10 detik
+            valve_controller.open_valve()
+            time.sleep(10)  # open valve for 10 seconds
+            valve_controller.close_valve()
+            time.sleep(5)  # close valve for 5 seconds
 
     except KeyboardInterrupt:
-        print("Program dihentikan oleh user.")
+        print("The program is stopped by the user.")
 
 if __name__ == "__main__":
     main()
