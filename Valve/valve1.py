@@ -1,5 +1,5 @@
-'''The following code is a simulation of controlling a valve that opens and closes periodically with a certain time. 
-The program runs in an infinite loop until the user stops it.'''
+"""The following code is a simulation of controlling a valve that opens and closes periodically with a certain time. 
+The program runs in an infinite loop until the user stops it."""
 
 import time
 start_time = time.time()
