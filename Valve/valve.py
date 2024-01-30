@@ -1,3 +1,5 @@
+"""The following code is a simple valve control simulation using Python with menu options to open, close, or exit the program."""
+
 class ControlValve:
     def __init__(self):
         self.is_open = False
