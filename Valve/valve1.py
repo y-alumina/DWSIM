@@ -11,7 +11,7 @@ class ControlValve:
     def open_valve(self):
         if not self.is_open:
             curent_time = time.time() - start_time
-            print("Open the valve -", curent_time)
+            print("Opening the valve -", curent_time)
             self.is_open = True
         else:
             print("Valve opened")
@@ -19,7 +19,7 @@ class ControlValve:
     def close_valve(self):
         if self.is_open:
             curent_time = time.time() - start_time
-            print("Close the Valve -", curent_time)
+            print("Closing the Valve -", curent_time)
             self.is_open = False
         else:
             print("Valve closed")
