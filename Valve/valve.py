@@ -31,9 +31,9 @@ def main():
             choice = input("Enter your choice: ")
 
             if choice == '1':
-                valve_controler.open_valve()
+                valve_controller.open_valve()
             elif choice == '2':
-                valve_controler.close_valve()
+                valve_controller.close_valve()
             elif choice == '0':
                 break
             else:
