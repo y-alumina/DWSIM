@@ -1,12 +1,12 @@
 import matplotlib.pyplot as plt
 
 def tangki_reaktor(F_in, C_in, F_out, V, waktu_simulasi, delta_t):
-    # Inisialisasi variabel
+    # Initial
     t = 0
     C = 0.0
     hasil_simulasi = [(t, C)]
 
-    # Euler Method
+    # Persamaan Reaktor Kontinyu (Ideal)
     while t < waktu_simulasi:
         dCdt = (F_in * (C_in - C) - F_out * C) / V
         C = C + delta_t * dCdt
@@ -16,7 +16,7 @@ def tangki_reaktor(F_in, C_in, F_out, V, waktu_simulasi, delta_t):
     return hasil_simulasi
 
 def plot_simulasi(hasil_simulasi):
-    # Ekstraksi data untuk plotting
+    # Ekstraksi data
     waktu, konsentrasi = zip(*hasil_simulasi)
 
     # Plot hasil simulasi
@@ -27,7 +27,7 @@ def plot_simulasi(hasil_simulasi):
     plt.show()
 
 if __name__ == "__main__":
-    # Parameter simulasi
+    # Variabel Proses
     F_in = 0.5  # Laju aliran masuk
     C_in = 2.0  # Konsentrasi masuk
     F_out = 0.2  # Laju aliran keluar
